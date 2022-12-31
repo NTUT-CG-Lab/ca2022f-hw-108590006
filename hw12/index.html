@@ -209,7 +209,11 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      ...
+      這次的問題都出在環境架不起來或某些函式庫抓不到。<br>
+      按照講義上安裝Python3.9在原本就有安裝其它版的的python時會抓不到，我先試著改環境變數，但沒什麼用，<br>
+	  最後是把所有python移除，再去官方網站下載python-3.9.0-amd64.exe安裝，最後重裝venv和requirements才成功。<br>
+	  另一個遇到的問題是出現Assets\Scripts\CubismLookTarget.cs(5,7): error CS0246: The type or namespace name 'Newtonsoft' could not be found (are you missing a using directive or an assembly reference?)<br>
+	  unity找不到Newtonsoft，最後是從 https://github.com/jilleJr/Newtonsoft.Json-for-Unity/releases/tag/13.0.102 下載原始碼後後放入Assets資料夾就可以了。
     </div>
   </div>
 
@@ -240,7 +244,7 @@
           <td>將背景變透明後build成執行檔</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
           <td id='m4'>2</td>
           <td>能夠將Cubism Unity with MediaPipe順利執行</td>
         </tr>
